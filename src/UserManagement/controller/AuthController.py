@@ -2,11 +2,11 @@ import os
 import time
 
 class AuthController:
-    userSerive = None
+    userService = None
     principalUser = None
 
     def __init__(self, userService):
-        self.userSerive = userService
+        self.userService = userService
 
     def exit(self):
         print("프로그램 종료중...")
@@ -25,7 +25,7 @@ class AuthController:
             select = input("명령을 선택하세요: ")
 
             if select == "1":
-                self.userSerive.signup()
+                self.userService.signup()
             elif select == "2":
                 self.principalUser = self.userService.signin()
                 if self.principalUser == None:

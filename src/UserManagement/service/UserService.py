@@ -1,5 +1,5 @@
 import os
-from UserManagement.repository.user.User import User
+from repository.user.User import User
 
 class UserService:
     userRepository = None
@@ -8,7 +8,7 @@ class UserService:
         self.userRepository = userRepository
 
     def signup(self):
-        os.system('cls')
+        os.system('clear')
         print("[회원가입]")
         email = input("이메일: ")
         name = input("이름: ")
@@ -24,7 +24,7 @@ class UserService:
         self.userRepository.insertUser(user)
     
     def signin(self):
-        os.system('cls')
+        os.system('clear')
         print("[로그인]")
         username = input("아이디:")
         password = input("비밀번호:")

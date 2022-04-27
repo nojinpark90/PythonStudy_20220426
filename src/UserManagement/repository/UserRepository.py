@@ -11,7 +11,7 @@ class UserRepository:
         data.get("user_mst").append(user)
         self.dataBase.save()
 
-    def gutUserByUsername(self, username):
+    def getUserByUsername(self, username):
         data = self.dataBase.getData()
         userList = data.get("user_mst")
         for user in userList:
